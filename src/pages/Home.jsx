@@ -10,7 +10,6 @@ export default function Home() {
             .then(res => res.json())
             .then(data => {
                 setProductsData(data)
-                console.log(data)
             })
     }, [])
 
