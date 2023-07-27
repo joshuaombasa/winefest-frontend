@@ -3,6 +3,8 @@ import React from "react";
 import WineImage from "../components/WineImage";
 import CartItem from "../components/CartItem";
 
+import Total from "../components/Total";
+
 export default function Cart() {
 
     const [winesInCart, setWinesInCart] = React.useState(null)
@@ -20,13 +22,14 @@ export default function Cart() {
             .then(res => res.json())
             .then(data => {
                 setWinesInCart(data)
-                console.log(data)
+                // console.log(data)
             })
     },[])
 
     return (
         <div className="cart--container">
             {winesInCart && cartItemsJsx}
+            <Total winesInCart={winesInCart}/>
         </div>
     )
 }
