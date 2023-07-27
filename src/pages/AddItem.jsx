@@ -2,7 +2,6 @@ import React from "react";
 
 export default function AddItem() {
 
-
     const [formData, setFormData] = React.useState({
         wineName: '',
         winePrice: '',
