@@ -4,6 +4,17 @@ import WineImage from "./WineImage";
 
 export default function CartItem({ item }) {
 
+    function removeItemFromCart(id) {
+        fetch(`http://localhost:3000/orders/${id}`, {
+            method : 'DELETE'
+        })
+           .then(res => res.json())
+           .then(data => {
+            console.log(data) 
+            window.location.reload(); // Refresh the page after removing an item
+           })
+    }
+
 
     return (
         <div className="cart--item--container">
@@ -15,7 +26,9 @@ export default function CartItem({ item }) {
             </div>
             <div className="right-side">
                 <p className="wine--in--cart--price">$ {item.price}</p>
-                <a className="remove--wine--from--cart--link">Remove</a>
+                <a href="#" className="remove--wine--from--cart--link"
+                  onClick={() => removeItemFromCart(item.id)}
+                >Remove</a>
             </div>
         </div>
     )
