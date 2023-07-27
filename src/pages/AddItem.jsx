@@ -9,7 +9,6 @@ export default function AddItem() {
         wineImage: null,
     })
 
-    console.log(formData)
 
     function handleChange(event) {
          const {name, value, type, files} = event.target
@@ -47,6 +46,13 @@ export default function AddItem() {
         })
             .then(res => res.json())
             .then(data => console.log(data))
+
+        setFormData({
+            wineName: '',
+            winePrice: '',
+            wineDescription: '',
+            wineImage: null,
+        })
     }
 
     return (
