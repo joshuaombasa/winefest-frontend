@@ -1,6 +1,7 @@
 import React from "react";
 
 import WineImage from "../components/WineImage";
+import CartItem from "../components/CartItem";
 
 export default function Cart() {
 
@@ -10,7 +11,7 @@ export default function Cart() {
 
     if (winesInCart) {
         cartItemsJsx = winesInCart.map(item => (
-            <p>{item.price}</p>
+            <CartItem key={item.id} item={item}/>
         ))
     }
 
