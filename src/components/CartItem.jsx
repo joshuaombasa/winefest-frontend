@@ -4,15 +4,22 @@ import WineImage from "./WineImage";
 
 export default function CartItem({ item }) {
 
-    function removeItemFromCart(id) {
-        fetch(`http://localhost:3000/orders/${id}`, {
-            method : 'DELETE'
-        })
-           .then(res => res.json())
-           .then(data => {
+    const removeItemFromCart = async (id) => {
+
+        try {
+            const res = await fetch(`http://localhost:3000/orders/${id}`, {
+                                        method : 'DELETE'
+                                    })
+            const data = await res.json()
             console.log(data) 
-            window.location.reload(); // Refresh the page after removing an item
-           })
+            window.location.reload(); 
+
+        } catch (error) {
+            console.log(error)
+        }
+        
+          
+           
     }
 
 
