@@ -6,11 +6,18 @@ export default function Home() {
     const [productsData, setProductsData] = React.useState(null)
 
     React.useEffect(() => {
-        fetch('http://localhost:3000/wines')
-            .then(res => res.json())
-            .then(data => {
+        const getWinesData  = async () => {
+            try {
+                const res = await  fetch('http://localhost:3000/wines')
+                const data = res.json()
                 setProductsData(data)
-            })
+            } catch(error) {
+                console.log(error)
+            }
+        }
+
+        getWinesData()
+        
     }, [])
 
     let productsJsx
