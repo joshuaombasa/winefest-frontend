@@ -7,16 +7,25 @@ export default function Product({ item }) {
 
     function addItemToCart() {
 
-       
-        fetch('http://localhost:3000/orders', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(item)
-        })
-            .then(res => res.json())
-            .then(data => console.log(data))
+        const getItms = async () => {
+            try {
+                const res = await fetch('http://localhost:3000/orders', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(item)
+                })
+
+                const data = await res.json()
+                console.log(data)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        getItms()
+
     }
 
     return (
