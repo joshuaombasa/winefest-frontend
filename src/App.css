@@ -53,7 +53,7 @@ a {
   height: 90vh;
 }
 
-.add--item--form {
+.add--item--form, .login--form {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -81,7 +81,7 @@ a {
   border: none;
 }
 
-.add--item--form > button {
+.add--item--form > button, .login--form > button {
   padding: 0.8em 1em;
   border: none;
   color: white;
@@ -209,3 +209,30 @@ a {
   font-weight: 600;
 }
 
+.login--container {
+  min-height: 70vh;
+  display: flex;
+}
+
+.login--form  {
+  margin: auto;
+}
+
+.login--form  label {
+  margin-bottom: 0.5 em;
+}
+
+
+.login--form > label {
+  margin-bottom: 1em;
+}
+
+.dealer--email, .dealer--password  {
+  margin-bottom: 1em;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+}
+
+.dealer--password {
+  margin-bottom: 2em;
+}
