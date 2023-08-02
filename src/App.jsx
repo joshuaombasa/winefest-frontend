@@ -10,6 +10,7 @@ import MainLayout from './components/MainLayout'
 import AddItem from './pages/AddItem'
 import Cart from './pages/Cart'
 import Home from './pages/Home'
+import Login from './pages/Login'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='home' element={<Home/>}/>
           <Route path='addItem' element={<AddItem />} />
           <Route path='cart' element={<Cart />} />
+          <Route path='login' element={<Login />} />
         </Route>
       </Routes>
     </>
