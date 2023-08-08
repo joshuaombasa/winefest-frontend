@@ -31,7 +31,8 @@ export default function Login() {
                     body : JSON.stringify(formData)
                 })
                 const data = await res.json()
-                console.log(data)
+                localStorage.setItem('token', data.token)
+                console.log(data.token)
             } catch(error) {
                 console.error(error)
             }
