@@ -48,7 +48,7 @@ a {
   color: purple;
 }
 
-.form--page {
+.form--page, .vendor--signup--container, .login--container {
   display: flex;
   height: 90vh;
 }
@@ -209,10 +209,7 @@ a {
   font-weight: 600;
 }
 
-.login--container {
-  min-height: 70vh;
-  display: flex;
-}
+
 
 .login--form  {
   margin: auto;
