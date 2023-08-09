@@ -11,6 +11,7 @@ import AddItem from './pages/AddItem'
 import Cart from './pages/Cart'
 import Home from './pages/Home'
 import Login from './pages/Login'
+import VendorSignup from './pages/VendorSignup'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path='addItem' element={<AddItem />} />
           <Route path='cart' element={<Cart />} />
           <Route path='login' element={<Login />} />
+          <Route path='vendorSignUp' element={<VendorSignup/>}/>
         </Route>
       </Routes>
     </>
