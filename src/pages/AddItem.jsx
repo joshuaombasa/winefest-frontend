@@ -16,15 +16,20 @@ export default function AddItem() {
         })
         .then(res => {
             if (res.ok) {
-                res.json()
                 setIsLoggedIn(true)
             }
+
+           return res.json()
         })
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+
+        })
         .catch(error => {
             console.error(error)
         })
     },[authKey])
+
 
     return (
         <>
