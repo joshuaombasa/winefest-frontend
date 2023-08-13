@@ -11,8 +11,6 @@ export default function Total({ winesInCart }) {
         }
     }
 
-   
-    
 
     return (
         <div className="total--wrapper">
