@@ -13,8 +13,12 @@ export default function Cart() {
 
     if (winesInCart) {
         cartItemsJsx = winesInCart.map(item => (
-            <CartItem key={item.id} item={item}/>
+            <CartItem key={item.id} item={item} removeThisItemFromCart={removeThisItemFromCart}/>
         ))
+    }
+
+    function removeThisItemFromCart(id) {
+        console.log(id)
     }
 
     React.useEffect(() => {
