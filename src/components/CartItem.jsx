@@ -11,7 +11,7 @@ export default function CartItem({ item,removeThisItemFromCart }) {
                                         method : 'DELETE'
                                     })
             const data = await res.json()
-            console.log(data) 
+            // console.log(data) 
             // window.location.reload(); 
 
         } catch (error) {
