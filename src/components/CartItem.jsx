@@ -2,7 +2,7 @@ import React from "react";
 import WineImage from "./WineImage";
 
 
-export default function CartItem({ item }) {
+export default function CartItem({ item,removeThisItemFromCart }) {
 
     const removeItemFromCart = async (id) => {
 
@@ -12,7 +12,7 @@ export default function CartItem({ item }) {
                                     })
             const data = await res.json()
             console.log(data) 
-            window.location.reload(); 
+            // window.location.reload(); 
 
         } catch (error) {
             console.log(error)
@@ -32,7 +32,10 @@ export default function CartItem({ item }) {
             <div className="right-side">
                 <p className="wine--in--cart--price">$ {item.price}</p>
                 <a href="#" className="remove--wine--from--cart--link"
-                  onClick={() => removeItemFromCart(item.id)}
+                  onClick={() => {
+                    removeItemFromCart(item.id)
+                    removeThisItemFromCart(item.id)
+                  }}
                 >Remove</a>
             </div>
         </div>
