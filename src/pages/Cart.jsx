@@ -18,8 +18,12 @@ export default function Cart() {
     }
 
     function removeThisItemFromCart(id) {
-        console.log(id)
+        setWinesInCart(prevWinesInCart => {
+            return prevWinesInCart.filter(wine => wine.id !== id)
+        })
     }
+
+    winesInCart && console.log(winesInCart)
 
     React.useEffect(() => {
         fetch('http://localhost:3000/orders')
@@ -28,7 +32,7 @@ export default function Cart() {
                 setWinesInCart(data)
                 // console.log(data)
             })
-    },[])
+    },[winesInCart])
 
     return (
         <div className="cart--container">
