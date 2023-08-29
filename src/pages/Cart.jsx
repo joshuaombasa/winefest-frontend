@@ -32,7 +32,7 @@ export default function Cart() {
                 setWinesInCart(data)
                 // console.log(data)
             })
-    },[winesInCart])
+    },[])
 
     return (
         <div className="cart--container">
