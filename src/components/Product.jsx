@@ -3,7 +3,7 @@ import WineImage from "./WineImage";
 
 export default function Product({ item }) {
 
-    // console.log(item)
+    
 
     function addItemToCart() {
 
