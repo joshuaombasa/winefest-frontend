@@ -23,7 +23,7 @@ export default function Cart() {
         })
     }
 
-    winesInCart && console.log(winesInCart)
+ 
 
     React.useEffect(() => {
         fetch('http://localhost:3000/orders')
