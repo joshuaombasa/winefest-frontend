@@ -5,7 +5,7 @@ import Login from "./Login";
 export default function AddItem() {
 
     const [isLoggedIn, setIsLoggedIn] = React.useState(false)
-    const[authKey, setAuthKey] = React.useState(localStorage.getItem('token'))
+    const[authKey, setAuthKey] = React.useState(() => localStorage.getItem('token'))
 
     React.useEffect(() => {
         fetch('http://localhost:3000/vendor', {
