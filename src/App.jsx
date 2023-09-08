@@ -12,6 +12,7 @@ import Cart from './pages/Cart'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import VendorSignup from './pages/VendorSignup'
+import Error from './pages/Error'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='cart' element={<Cart />} />
           <Route path='login' element={<Login />} />
           <Route path='vendorSignUp' element={<VendorSignup/>}/>
+          <Route path='*' element={<Error/>}/>
         </Route>
       </Routes>
     </>
