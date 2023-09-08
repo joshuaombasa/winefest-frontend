@@ -11,6 +11,10 @@ body {
   margin: 0;
 }
 
+h1,p,a {
+  margin: 0;
+}
+
 p {
   line-height: 1.5;
 }
@@ -232,4 +236,25 @@ a {
 
 .dealer--password {
   margin-bottom: 2em;
+}
+
+.error--page--container {
+  display: flex;
+  min-height: 70vh;
+}
+
+.error--page--container div {
+  margin: auto;
+}
+
+.error--page--container a {
+  display: block;
+  color: #254746;
+  margin-top: 1em;
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+
+.error--message {
+  color: #53c2be;
 }
