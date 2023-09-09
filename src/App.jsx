@@ -13,6 +13,7 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import VendorSignup from './pages/VendorSignup'
 import Error from './pages/Error'
+import Wine from './pages/Wine'
 
 function App() {
 
@@ -21,12 +22,14 @@ function App() {
     <>
       <Routes >
         <Route path='/' element={<MainLayout />}>
-          <Route path='home' element={<Home/>}/>
+          <Route path='wines' element={<Home />}>
+            <Route path=':id' element={<Wine />} />
+          </Route>
           <Route path='addItem' element={<AddItem />} />
           <Route path='cart' element={<Cart />} />
           <Route path='login' element={<Login />} />
-          <Route path='vendorSignUp' element={<VendorSignup/>}/>
-          <Route path='*' element={<Error/>}/>
+          <Route path='vendorSignUp' element={<VendorSignup />} />
+          <Route path='*' element={<Error />} />
         </Route>
       </Routes>
     </>
