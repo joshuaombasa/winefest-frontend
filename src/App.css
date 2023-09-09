@@ -11,9 +11,6 @@ body {
   margin: 0;
 }
 
-h1,p,a {
-  margin: 0;
-}
 
 p {
   line-height: 1.5;
@@ -247,13 +244,13 @@ a {
   margin: auto;
 }
 
-.error--page--container a {
+/* .error--page--container a {
   display: block;
   color: #254746;
   margin-top: 1em;
   font-size: 1.5rem;
   text-decoration: underline;
-}
+} */
 
 .error--message {
   color: #53c2be;
