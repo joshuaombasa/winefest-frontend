@@ -1,4 +1,5 @@
 import React from "react";
+import { redirect } from "react-router-dom";
 import AddItemForm from "../components/AddItemForm";
 import Login from "./Login";
 
@@ -17,6 +18,8 @@ export default function AddItem() {
         .then(res => {
             if (res.ok) {
                 setIsLoggedIn(true)
+            } else {
+                return redirect("/login")
             }
 
            return res.json()
