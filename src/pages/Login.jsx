@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import { redirect, Navigate } from "react-router-dom";
 export default function Login() {
 
     const [formData, setFormData] = useState({
@@ -30,11 +30,15 @@ export default function Login() {
                     },
                     body : JSON.stringify(formData)
                 })
+
                 const data = await res.json()
                 if (data.token) {
                     localStorage.setItem('token', data.token)
                 }
                 console.log(data)
+                if (data.token)  {
+                    <Navigate to={"/vendorSignUp"}/>
+                }
             } catch(error) {
                 console.error(error)
             }
