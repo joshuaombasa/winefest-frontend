@@ -255,3 +255,7 @@ a {
 .error--message {
   color: #53c2be;
 }
+
+.active--style {
+  border-bottom: 1px solid #53c2be;
+}
