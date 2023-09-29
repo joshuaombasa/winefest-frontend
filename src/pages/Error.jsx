@@ -6,7 +6,7 @@ export default function Error() {
         <div className="error--page--container">
             <div>
                 <h1 className="error--message">Resource not found</h1>
-                <Link to="home">Go to home page</Link>
+                <Link to="/wines">Go to home page</Link>
             </div>
         </div>
     )
