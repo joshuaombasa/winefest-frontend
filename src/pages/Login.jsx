@@ -1,11 +1,13 @@
 import React, {useState} from "react";
-import { redirect, Navigate } from "react-router-dom";
+import { redirect, Navigate, useNavigate } from "react-router-dom";
 export default function Login() {
 
     const [formData, setFormData] = useState({
         email: '',
         password: ''
     })
+
+    const navigate = useNavigate()
 
     function handleChange (event) {
         const {name, value} = event.target
@@ -36,9 +38,7 @@ export default function Login() {
                     localStorage.setItem('token', data.token)
                 }
                 console.log(data)
-                if (data.token)  {
-                    <Navigate to={"/vendorSignUp"}/>
-                }
+                navigate("/addItem")
             } catch(error) {
                 console.error(error)
             }
