@@ -14,6 +14,7 @@ import Login from './pages/Login'
 import VendorSignup from './pages/VendorSignup'
 import Error from './pages/Error'
 import Wine from './pages/Wine'
+import AuthRequired from './components/AuthRequired'
 
 function App() {
 
@@ -25,7 +26,9 @@ function App() {
           <Route path='wines' element={<Home />}>
             <Route path=':id' element={<Wine />} />
           </Route>
-          <Route path='addItem' element={<AddItem />} />
+          <Route element={<AuthRequired/>}>
+            <Route path='addItem' element={<AddItem />} />
+          </Route>
           <Route path='cart' element={<Cart />} />
           <Route path='login' element={<Login />} />
           <Route path='vendorSignUp' element={<VendorSignup />} />
